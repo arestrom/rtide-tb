@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+.httr-oauth
+.slackr
+
+input/
+
+.dcf
+.DS_Store
