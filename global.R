@@ -1,3 +1,17 @@
+#=====================================================================================
+# Notes:
+# 1. Tide output from shiny app is not identical to NOAA predictions. But difference
+#    appears to be just an issue of precision. If estimates were not rounded at earlier
+#    stage predictions would most likely be identical. It may also be the result of
+#    using a spline to speed up output and getting flatter values. Need to check.
+#
+#    Test of rtide vs NOAA gives exactly the correct results.
+#
+#
+# AS 2019-04-03
+#====================================================================================
+
+
 ## upload button
 library(shiny)
 library(shinyjs)
@@ -14,7 +28,7 @@ library(shinyBS)
 slackr::slackr_setup(config_file = "./.slackr")
 
 source('functions.R', local = TRUE)
-poisson_logo <- actionLink(inputId = 'poisson', 
+poisson_logo <- actionLink(inputId = 'poisson',
                            label = img(src = 'poisson-logo.png',
                                        height = 177/5,
                                        width = 739/5,
